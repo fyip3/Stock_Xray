@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "450607327670",
+    "project_id": "stock-x-ray",
+    "storage_bucket": "stock-x-ray.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450607327670:android:bc1b44fb4e156c23137917",
+        "android_client_info": {
+          "package_name": "com.example.stockx_ray"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450607327670-5o8ifkmheg2tqji98c00c2q8dn2m37pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfCyuVneHyd-9jvHfRWpwNFUwc1o-dzRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450607327670-5o8ifkmheg2tqji98c00c2q8dn2m37pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
