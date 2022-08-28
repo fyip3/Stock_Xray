@@ -6,4 +6,164 @@
     android:layout_height="match_parent"
     tools:context=".SignupActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="328dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="44dp"
+        android:text="Welcome."
+        android:textColor="#3BBFA1"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="117dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="67dp"
+        android:onClick="createUser"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/emaill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <Spinner
+        android:id="@+id/expertisee"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="206dp"
+        app:layout_constraintBottom_toBottomOf="@+id/finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Spinner
+        android:id="@+id/termm"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="131dp"
+        app:layout_constraintBottom_toBottomOf="@+id/finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/agee" />
+
+    <EditText
+        android:id="@+id/passwordd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="91dp"
+        android:text="Password"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/passwordd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emaill" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="29dp"
+        android:text="Email"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordd"
+        app:layout_constraintEnd_toStartOf="@+id/emaill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="65dp"
+        android:text="Term"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/finish"
+        app:layout_constraintEnd_toStartOf="@+id/termm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="37dp"
+        android:text="Age"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/agee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordd" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="33dp"
+        android:text="Expertise"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/expertisee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/agee"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="177dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/emaill" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

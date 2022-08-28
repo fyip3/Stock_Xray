@@ -1,38 +1,57 @@
 package com.example.stockx_ray;
 
-import android.widget.EditText;
+import java.sql.Array;
+import java.util.ArrayList;
 
 public class User {
-    int age;
-    String name;
+    String age;
+    String email;
     String expertise;
-    int frequency;
-    String period;
-    int maxtime;
+    String term;
+    String timelimit;
+    ArrayList<Criteria> criterias;
 
-    public User(int age, String name, String expertise, int frequency, String period, int maxtime) {
+    public User(String age, String email, String expertise, String term, String timelimit) {
         this.age = age;
-        this.name = name;
+        this.email = email;
         this.expertise = expertise;
-        this.frequency = frequency;
-        this.period = period;
-        this.maxtime = maxtime;
+        this.term = term;
+        this.timelimit = timelimit;
+        criterias = new ArrayList<>();
+        Criteria two = new Criteria("Criteria 2");
+        criterias.add(two);
+        Criteria three = new Criteria("Criteria 3");
+        criterias.add(three);
+        Criteria four = new Criteria("Criteria 4");
+        criterias.add(four);
+        Criteria five = new Criteria("Criteria 5");
+        criterias.add(five);
     }
 
-    public int getAge() {
+    public User() { }
+
+    public void addCriteria(Criteria crit) {
+        criterias.add(0, crit);
+    }
+
+    public ArrayList<Criteria> getCriterias() {
+        return criterias;
+    }
+
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String email) {
+        this.email = email;
     }
 
     public String getExpertise() {
@@ -43,27 +62,19 @@ public class User {
         this.expertise = expertise;
     }
 
-    public int getFrequency() {
-        return frequency;
+    public String getTerm() {
+        return term;
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
+    public void setTerm(String term) {
+        this.term = term;
     }
 
-    public String getPeriod() {
-        return period;
+    public String getTimelimit() {
+        return timelimit;
     }
 
-    public void setPeriod(String period) {
-        this.period = period;
-    }
-
-    public int getMaxtime() {
-        return maxtime;
-    }
-
-    public void setMaxtime(int maxtime) {
-        this.maxtime = maxtime;
+    public void setTimelimit(String timelimit) {
+        this.timelimit = timelimit;
     }
 }

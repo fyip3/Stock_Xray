@@ -6,4 +6,187 @@
     android:layout_height="match_parent"
     tools:context=".ViewCriteriaActivity">
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="42dp"
+        android:text="Stock Criteria 1"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="8dp"
+        android:text="Profit Margin (%):"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/prof"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fif"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/inst"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="198dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/ins"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/ins"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inst"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/save" />
+
+    <EditText
+        android:id="@+id/fo"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/tra"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tra"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fo"
+        app:layout_constraintEnd_toEndOf="@+id/ins"
+        app:layout_constraintStart_toStartOf="@+id/ins" />
+
+    <EditText
+        android:id="@+id/fif"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="@+id/fo"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Held by Insiders:"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="42dp"
+        android:text="Trailing PE:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prof" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="Forward PE:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/fo"
+        app:layout_constraintStart_toStartOf="@+id/fif" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="21dp"
+        android:text="Held by Institutions:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/inst"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="52 Week Change (%):"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/maa"
+        android:layout_width="227dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="93dp"
+        android:text="INCLUDE MOVING AVERAGE TESTS"
+        app:layout_constraintBottom_toBottomOf="@+id/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="run"
+        android:text="run"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="save"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

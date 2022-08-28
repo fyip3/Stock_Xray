@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,10 +39,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View v) {
-        String emaill = email.getText().toString();
-        String pass = password.getText().toString();
+//        String emaill = email.getText().toString();
+//        String pass = password.getText().toString();
 
-        FirebaseUser mUser = mAuth.getCurrentUser();
+        String emaill = "c@gmail.com";
+        String pass = "111111";
+
+        try {
+            mAuth.signInWithEmailAndPassword(emaill, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        Log.d("SIGN IN", "Successfully signed in the user");
+
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "Invalid Username/Password", Toast.LENGTH_SHORT).show();
+                        Log.w("SIGN IN", "signIn:failure", task.getException());
+                        updateUI(null);
+                    }
+                }
+            });
+        } catch (Exception e) {
+            Toast.makeText(MainActivity.this, "Invalid Username/Password", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -52,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void updateUI(FirebaseUser user) {
         if(user != null) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MenuActivity.class);
             startActivity(intent);
         }
     }

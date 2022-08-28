@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stockx_ray" >
+    package="com.example.stockx_ray">
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StockXRay" >
+        android:theme="@style/Theme.StockXRay">
         <activity
-            android:name=".ViewCriteriaActivity"
+            android:name=".DateActivity"
             android:exported="false" />
         <activity
-            android:name=".AddCriteriaActivity"
+            android:name=".ViewHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewCriteriaActivity"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
@@ -29,7 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
