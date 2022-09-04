@@ -29,6 +29,7 @@ public class Adap extends RecyclerView.Adapter<Adap.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.dat.setText(symbols.get(position));
 
     }
 

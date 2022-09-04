@@ -44,6 +44,10 @@ public class Stock {
         this.symbol=symbol;
     }
 
+    public Stock() {
+
+    }
+
     public double getPrice() {
         return price;
     }

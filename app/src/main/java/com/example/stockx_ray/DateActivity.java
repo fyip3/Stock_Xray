@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,6 +24,7 @@ public class DateActivity extends AppCompatActivity implements Adapter.ItemClick
     private FirebaseAuth mAuth;
     private ArrayList<String> dates;
     int amount;
+    private int a;
     FirebaseFirestore db;
     Adapter adap;
 
@@ -40,8 +42,8 @@ public class DateActivity extends AppCompatActivity implements Adapter.ItemClick
 
         db.collection("users").document(mAuth.getCurrentUser().getUid()).collection(no).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-
                 for (QueryDocumentSnapshot ds : Objects.requireNonNull(task.getResult())) {
+                    a++;
                     System.out.println("DWADWA");
                     dates.add(ds.getId());
                     amount++;
@@ -51,8 +53,12 @@ public class DateActivity extends AppCompatActivity implements Adapter.ItemClick
                 rec.setLayoutManager(new LinearLayoutManager(this));
                 adap.setClickListener(this);
                 rec.setAdapter(adap);
+                if(a==0) {
+                    Toast.makeText(DateActivity.this, "No screenings have been done", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 
     @Override

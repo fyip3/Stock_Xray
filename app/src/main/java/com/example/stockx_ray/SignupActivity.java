@@ -81,21 +81,22 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void createUser(View v) {
-        emailll = emaill.getText().toString();
-        pass = passwordd.getText().toString();
-        age = agee.getText().toString();
-        expertise = expertisee.getSelectedItem().toString();
-        term = termm.getSelectedItem().toString();
-        User userrr = new User(age, emailll, expertise, term, timelimit);
-        Criteria crit = createRecommended();
-        if(crit!=null) {
-            userrr.addCriteria(crit);
-        }
-        else {
-            Toast.makeText(this, "Please fill in all fields",
-                    Toast.LENGTH_SHORT).show();
-        }
-        if(!emailll.isEmpty() && !pass.isEmpty()) {
+        try {
+            emailll = emaill.getText().toString();
+            pass = passwordd.getText().toString();
+            age = agee.getText().toString();
+            expertise = expertisee.getSelectedItem().toString();
+            term = termm.getSelectedItem().toString();
+            User userrr = new User(age, emailll, expertise, term, timelimit);
+            Criteria crit = createRecommended();
+            if(crit!=null) {
+                userrr.addCriteria(crit);
+            }
+            else {
+                Toast.makeText(this, "Please fill in all fields",
+                        Toast.LENGTH_SHORT).show();
+            }
+            if(!emailll.isEmpty() && !pass.isEmpty()) {
                 mAuth.createUserWithEmailAndPassword(emailll, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -116,9 +117,14 @@ public class SignupActivity extends AppCompatActivity {
             }
 
 
-        else {
-            Toast.makeText(SignupActivity.this, "Please enter your email and password", Toast.LENGTH_SHORT).show();
+            else {
+                Toast.makeText(SignupActivity.this, "Please enter your email and password", Toast.LENGTH_SHORT).show();
+            }
+        } catch(Exception e) {
+            Toast.makeText(SignupActivity.this, "Invalid Information", Toast.LENGTH_SHORT).show();
+
         }
+
     }
 
     public Criteria createRecommended() {

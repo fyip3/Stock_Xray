@@ -8,11 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -24,6 +27,8 @@ public class ProfileActivity extends AppCompatActivity {
     private Button three;
     private Button four;
     private Button five;
+    private TextView emial;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,9 @@ public class ProfileActivity extends AppCompatActivity {
         three = findViewById(R.id.sss);
         four = findViewById(R.id.ssss);
         five = findViewById(R.id.sssss);
+        emial = findViewById(R.id.emial);
+        mAuth = FirebaseAuth.getInstance();
+        emial.setText("Welcome, "+mAuth.getCurrentUser().getEmail());
 
     }
 

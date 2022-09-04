@@ -94,22 +94,29 @@ public class ViewCriteriaActivity extends AppCompatActivity {
     }
 
     public void save(View v) {
-        user.getCriterias().get(no).setProfitMargin(Double.parseDouble(prof.getText().toString()));
-        user.getCriterias().get(no).setFpe(Double.parseDouble(fo.getText().toString()));
-        user.getCriterias().get(no).setTpe(Double.parseDouble(tra.getText().toString()));
-        user.getCriterias().get(no).setInsider(Double.parseDouble(ins.getText().toString()));
-        user.getCriterias().get(no).setInstitution(Double.parseDouble(inst.getText().toString()));
-        user.getCriterias().get(no).setFiftyChange(Double.parseDouble(fif.getText().toString()));
-        if(fif.getText().toString()!="0") {
-            user.getCriterias().get(no).setVar(true);
+        try {
+            user.getCriterias().get(no).setProfitMargin(Double.parseDouble(prof.getText().toString()));
+            user.getCriterias().get(no).setFpe(Double.parseDouble(fo.getText().toString()));
+            user.getCriterias().get(no).setTpe(Double.parseDouble(tra.getText().toString()));
+            user.getCriterias().get(no).setInsider(Double.parseDouble(ins.getText().toString()));
+            user.getCriterias().get(no).setInstitution(Double.parseDouble(inst.getText().toString()));
+            user.getCriterias().get(no).setFiftyChange(Double.parseDouble(fif.getText().toString()));
+            if(fif.getText().toString()!="0") {
+                user.getCriterias().get(no).setVar(true);
+            }
+            if(maa.getText().toString().equals("EXCLUDE MOVING AVERAGE TESTS")) {
+                user.getCriterias().get(no).setMa(true);
+            }
+            else {
+                user.getCriterias().get(no).setMa(false);
+            }
+            db.collection("users").document(mAuth.getCurrentUser().getUid()).update("criterias", user.getCriterias());
         }
-        if(maa.getText().toString().equals("EXCLUDE MOVING AVERAGE TESTS")) {
-            user.getCriterias().get(no).setMa(true);
+        catch (Exception e) {
+            Toast.makeText(ViewCriteriaActivity.this, "Invalid Values", Toast.LENGTH_SHORT).show();
+
         }
-        else {
-            user.getCriterias().get(no).setMa(false);
-        }
-        db.collection("users").document(mAuth.getCurrentUser().getUid()).update("criterias", user.getCriterias());
+
     }
 
     public void run(View v) {

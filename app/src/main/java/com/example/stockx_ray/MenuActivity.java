@@ -28,6 +28,7 @@ public class MenuActivity extends AppCompatActivity {
         three = findViewById(R.id.three);
         four = findViewById(R.id.four);
         five = findViewById(R.id.five);
+        mAuth = FirebaseAuth.getInstance();
 
     }
     public void signOut(View v) {

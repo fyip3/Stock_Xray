@@ -234,7 +234,10 @@ public class Criteria implements Serializable {
                                                             Stock stockx = new Stock(pricee, symbol, twoo, fiftyy, loww, highh);
                                                             //stocks.add(stock);
                                                             if(var==false) {
-                                                                firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).collection("stocks").document(stockx.getSymbol()).set(stockx);
+                                                                Stock ss = new Stock();
+                                                                firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).set(ss);
+
+                                                                firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).collection("symbols").document(stockx.getSymbol()).set(stockx);
                                                             }
                                                             res.append("MA Passed");
                                                             pass=true;
@@ -418,6 +421,9 @@ public class Criteria implements Serializable {
                                                                     if(pass==true) {
                                                                         stock = new Stock(pricee, symbol, twoo, fiftyy, loww, highh, xxprofitMargin, xxfiftyChange, xxinsider, xxinstitution, xxtpe, xxfpe);
                                                                         //firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection("criterias").document(crit.getName()).collection("stocks").document(stock.getSymbol()).set(stock);
+                                                                        Stock ss = new Stock();
+                                                                        firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).set(ss);
+
                                                                         firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).collection("symbols").document(stock.getSymbol()).set(stock);
 
                                                                         res.append("All Tests Passed");
@@ -430,6 +436,8 @@ public class Criteria implements Serializable {
                                                                 else {
                                                                     //stocks.add(stock);
                                                                      stock = new Stock(xxprofitMargin, xxfiftyChange, xxinsider, xxinstitution, xxtpe, xxfpe, symbol);
+                                                                    Stock ss = new Stock();
+                                                                    firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).set(ss);
                                                                     firestore.collection("users").document(mAuth.getCurrentUser().getUid()).collection(crit.getName()).document(sfd.format(date)).collection("symbols").document(stock.getSymbol()).set(stock);
                                                                     res.append("All Tests Passed");
                                                                 }

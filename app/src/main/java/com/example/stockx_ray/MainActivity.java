@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View v) {
-//        String emaill = email.getText().toString();
-//        String pass = password.getText().toString();
+        String emaill = email.getText().toString();
+        String pass = password.getText().toString();
 
-        String emaill = "c@gmail.com";
-        String pass = "111111";
+//        String emaill = "c@gmail.com";
+//        String pass = "111111";
 
         try {
             mAuth.signInWithEmailAndPassword(emaill, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

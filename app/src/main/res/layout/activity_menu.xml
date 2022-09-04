@@ -4,52 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#85A0E4"
     tools:context=".MenuActivity">
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="133dp"
+        android:layout_marginEnd="75dp"
         android:text="Your Criteria Sets"
-        android:textSize="28sp"
+        android:textColor="#208285"
+        android:textColorHint="#000000"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/recommended"
         android:layout_width="287dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="52dp"
         android:onClick="goCrit"
         android:text="Recommended Criteria"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/three"
-        android:layout_width="287dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="4dp"
-        android:onClick="goCrit"
-        android:text="Criteria 3"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/two" />
-
-    <Button
         android:id="@+id/four"
         android:layout_width="287dp"
-        android:layout_height="62dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="3dp"
         android:onClick="goCrit"
         android:text="Criteria 4"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three" />
 
@@ -61,25 +56,39 @@
         android:text="Criteria 5"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/four" />
 
     <Button
         android:id="@+id/two"
         android:layout_width="287dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="63dp"
         android:onClick="goCrit"
         android:text="Criteria 2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recommended" />
 
     <Button
+        android:id="@+id/three"
+        android:layout_width="287dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="1dp"
+        android:onClick="goCrit"
+        android:text="Criteria 3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two" />
+
+    <Button
         android:id="@+id/button8"
         android:layout_width="128dp"
-        android:layout_height="56dp"
+        android:layout_height="59dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="28dp"
         android:onClick="goProfile"
@@ -90,9 +99,9 @@
     <Button
         android:id="@+id/button9"
         android:layout_width="128dp"
-        android:layout_height="62dp"
+        android:layout_height="63dp"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginBottom="25dp"
         android:onClick="signOut"
         android:text="Logout"
         app:layout_constraintBottom_toBottomOf="parent"
