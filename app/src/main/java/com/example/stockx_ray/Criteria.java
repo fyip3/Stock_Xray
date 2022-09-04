@@ -73,7 +73,7 @@ public class Criteria implements Serializable {
         mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
             try  {
-                InputStream is = co.getAssets().open("sym");
+                InputStream is = co.getAssets().open("symbols");
                 //Scanner input = null;
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
